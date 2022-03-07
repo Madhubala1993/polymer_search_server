@@ -2,7 +2,6 @@ import cors from "cors";
 import express from "express";
 import dotenv from "dotenv";
 import { MongoClient } from "mongodb";
-// import { productsRouter } from "./routes/products.js";
 import { repoRouter } from "./routes/repo.js";
 
 dotenv.config();
@@ -28,8 +27,6 @@ app.use(cors());
 app.get("/", (request, response) => {
   response.send("Hello!");
 });
-
-// app.use("/equipments", productsRouter);
 
 app.use("/repo", repoRouter);
 
